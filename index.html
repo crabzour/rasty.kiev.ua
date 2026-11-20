@@ -1,0 +1,494 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="top" href="./index.php" title="Список форумов Форум" />
+<link rel="search" href="./search.php" title="Поиск" />
+<link rel="help" href="./faq.php" title="FAQ" />
+<link rel="author" href="./memberlist.php" title="Пользователи" />
+
+<title>Форум :: Главная</title>
+<!-- link rel="stylesheet" href="templates/subSilver/subSilver.css" type="text/css" -->
+<style type="text/css">
+<!--
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http://www.subBlue.com
+
+  NOTE: These CSS definitions are stored within the main page body so that you can use the phpBB2
+  theme administration centre. When you have finalised your style you could cut the final CSS code
+  and place it in an external file, deleting this section to save bandwidth.
+*/
+
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+body {
+	background-color: #E5E5E5;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+}
+
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #006699; }
+a:hover		{ text-decoration: underline; color : #DD6900; }
+hr	{ height: 0px; border: solid #D1D7DC 0px; border-top-width: 1px;}
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #FFFFFF; border: 2px #006699 solid; }
+
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #EFEFEF; }
+td.row2	{ background-color: #DEE3E7; }
+td.row3	{ background-color: #D1D7DC; }
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(templates/subSilver/images/cellpic2.jpg);
+		background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+	color: #FFA34F; font-size: 11px; font-weight : bold;
+	background-color: #006699; height: 25px;
+	background-image: url(templates/subSilver/images/cellpic3.gif);
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-image: url(templates/subSilver/images/cellpic1.gif);
+			background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px;
+}
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px;
+}
+td.row3Right,td.spaceRow {
+	background-color: #D1D7DC; border: #FFFFFF; border-style: solid;
+}
+
+th.thHead,td.catHead { font-size: 12px; border-width: 1px 1px 0px 1px; }
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 1px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 { border-width: 1px 0px 0px 0px; }
+th.thCornerL { border-width: 1px 0px 0px 1px; }
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle	{
+	font-weight: bold; font-size: 22px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none; line-height : 120%; color : #000000;
+}
+
+/* General text */
+.gen { font-size : 12px; }
+.genmed { font-size : 11px; }
+.gensmall { font-size : 10px; }
+.gen,.genmed,.gensmall { color : #000000; }
+a.gen,a.genmed,a.gensmall { color: #006699; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover	{ color: #DD6900; text-decoration: underline; }
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu		{ font-size : 11px; color : #000000 }
+a.mainmenu		{ text-decoration: none; color : #006699;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 12px ; letter-spacing: 1px; color : #006699}
+a.cattitle		{ text-decoration: none; color : #006699; }
+a.cattitle:hover{ text-decoration: underline; }
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 12px; color : #006699; }
+a.forumlink 	{ text-decoration: none; color : #006699; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav			{ font-weight: bold; font-size: 11px; color : #000000;}
+a.nav			{ text-decoration: none; color : #006699; }
+a.nav:hover		{ text-decoration: underline; }
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle,h1,h2	{ font-weight: bold; font-size: 11px; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #006699; }
+a.topictitle:visited { text-decoration: none; color : #5493B4; }
+a.topictitle:hover	{ text-decoration: underline; color : #DD6900; }
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size : 11px; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size : 10px; color : #000000; }
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 12px; line-height: 18px}
+a.postlink:link	{ text-decoration: none; color : #006699 }
+a.postlink:visited { text-decoration: none; color : #5493B4; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+
+/* Quote & Code blocks */
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 11px; color: #006600;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444; line-height: 125%;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+/* Copyright and bottom info */
+.copyright		{ font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+
+/* Form elements */
+input,textarea, select {
+	color : #000000;
+	font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+	border-color : #000000;
+}
+
+/* The text input fields background colour */
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+}
+
+input { text-indent : 2px; }
+
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #EFEFEF;
+	color : #000000;
+	font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option */
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;
+}
+
+/* None-bold submit button */
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+}
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #DEE3E7; border-style: none; }
+
+/* Import the fancy styles for IE only (NS4.x doesn't use the @import function) */
+@import url("templates/subSilver/formIE.css");
+-->
+</style>
+
+
+
+
+</head>
+<body bgcolor="#E5E5E5" text="#000000" link="#006699" vlink="#5493B4">
+
+<script type="text/javascript" src="http://rasty.kiev.ua/images/snow.js"></script>
+
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+	<tr>
+		<td class="bodyline"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td><a href="index.php"><img src="templates/subSilver/images/logo_phpBB.gif" border="0" alt="Список форумов Форум" vspace="1" /></a></td>
+				<td align="center" width="100%" valign="middle"><span class="maintitle">Форум</span><br /><span class="gen">Форум<br />&nbsp; </span>
+				<table cellspacing="0" cellpadding="2" border="0">
+					<tr>
+						<td align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="faq.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_faq.gif" width="12" height="13" border="0" alt="FAQ" hspace="3" />FAQ</a>&nbsp; &nbsp;<a href="search.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_search.gif" width="12" height="13" border="0" alt="Поиск" hspace="3" />Поиск</a>&nbsp; &nbsp;<a href="memberlist.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_members.gif" width="12" height="13" border="0" alt="Пользователи" hspace="3" />Пользователи</a>&nbsp; &nbsp;<a href="groupcp.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_groups.gif" width="12" height="13" border="0" alt="Группы" hspace="3" />Группы</a>&nbsp; &nbsp;<a href="medals.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_medal.gif" width="12" height="13" border="0" alt="medals.php" hspace="3" />Награды</a>&nbsp;
+						&nbsp;<a href="profile.php?mode=register" class="mainmenu"><img src="templates/subSilver/images/icon_mini_register.gif" width="12" height="13" border="0" alt="Регистрация" hspace="3" />Регистрация</a>&nbsp;
+						</span></td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="profile.php?mode=editprofile" class="mainmenu"><img src="templates/subSilver/images/icon_mini_profile.gif" width="12" height="13" border="0" alt="Профиль" hspace="3" />Профиль</a>&nbsp; &nbsp;<a href="sudoku.php" class="mainmenu"><img src="images/icon_mini_sudoku.gif" width="12" height="13" border="0" alt="Судоку" hspace="3" />Судоку</a>&nbsp; &nbsp;<a href="privmsg.php?folder=inbox" class="mainmenu"><img src="templates/subSilver/images/icon_mini_message.gif" width="12" height="13" border="0" alt="Войти и проверить личные сообщения" hspace="3" />Войти и проверить личные сообщения</a>&nbsp; &nbsp;<a href="login.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_login.gif" width="12" height="13" border="0" alt="Вход" hspace="3" />Вход</a>&nbsp;</span></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+
+		<br />
+<table width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+  <tr>
+	<td align="left" valign="bottom"><span class="gensmall">
+	Текущее время Пт Ноя 20, 2026 8:47 pm<br /></span><span class="nav"><a href="index.php" class="nav">Список форумов Форум</a></span></td>
+	<td align="right" valign="bottom" class="gensmall">
+		<a href="search.php?search_id=unanswered" class="gensmall">Найти сообщения без ответов</a></td>
+  </tr>
+</table>
+
+<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
+  <tr>
+	<th colspan="2" class="thCornerL" height="25" nowrap="nowrap">&nbsp;Форум&nbsp;</th>
+	<th width="50" class="thTop" nowrap="nowrap">&nbsp;Темы&nbsp;</th>
+	<th width="50" class="thTop" nowrap="nowrap">&nbsp;Сообщения&nbsp;</th>
+	<th class="thCornerR" nowrap="nowrap">&nbsp;Последнее сообщение&nbsp;</th>
+  </tr>
+  <tr>
+	<td class="catLeft" colspan="2" height="28"><span class="cattitle"><a href="index.php?c=9" class="cattitle">Информационно-аналитический раздел</a></span></td>
+	<td class="rowpic" colspan="3" align="right">&nbsp;</td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=22" class="forumlink">Политика</a><br />
+	  </span> <span class="genmed">Политические дискуссии(без модерации) <br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">6412</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">169266</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Пт Ноя 20, 2026 10:21 am<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=501402#501402"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=47" class="forumlink">Религия</a><br />
+	  </span> <span class="genmed">Религия. Культура. Философия. Духовность.<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">628</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">15431</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Вс Окт 25, 2026 1:14 am<br /><a href="profile.php?mode=viewprofile&amp;u=13266">tania</a> <a href="viewtopic.php?p=501313#501313"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=59" class="forumlink">Спорт</a><br />
+	  </span> <span class="genmed">турниры, матчи, поединки, все такое...<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">74</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">2630</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Пт Окт 09, 2026 12:15 pm<br /><a href="profile.php?mode=viewprofile&amp;u=13266">tania</a> <a href="viewtopic.php?p=501255#501255"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="catLeft" colspan="2" height="28"><span class="cattitle"><a href="index.php?c=7" class="cattitle">Разное</a></span></td>
+	<td class="rowpic" colspan="3" align="right">&nbsp;</td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=58" class="forumlink">Культура</a><br />
+	  </span> <span class="genmed">Кино, музыка, искусство<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">1895</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">44795</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Вт Ноя 17, 2026 11:28 pm<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=501393#501393"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=5" class="forumlink">Мысли вслух</a><br />
+	  </span> <span class="genmed">Для тех, кому за 30<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">556</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">44138</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Чт Ноя 19, 2026 9:12 pm<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=501401#501401"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=7" class="forumlink">Кабинет Психолога</a><br />
+	  </span> <span class="genmed">раздел форума не модерируется (:<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">292</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">14448</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Вс Окт 04, 2026 4:21 pm<br /><a href="profile.php?mode=viewprofile&amp;u=13266">tania</a> <a href="viewtopic.php?p=501209#501209"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=12" class="forumlink">Сновидения</a><br />
+	  </span> <span class="genmed">Дневники сновидений, ОС, картографирование.<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">195</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">16070</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Чт Фев 29, 2024 8:16 pm<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=493679#493679"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=11" class="forumlink">Кулинария</a><br />
+	  </span> <span class="genmed">Рецепты от Шеф-повара<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">175</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">13641</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Вс Май 11, 2025 1:16 pm<br /><a href="profile.php?mode=viewprofile&amp;u=28976">МихайловнаЗоя</a> <a href="viewtopic.php?p=497536#497536"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=83" class="forumlink">Сад-огород</a><br />
+	  </span> <span class="genmed">Выращиваем помидорчики, мешаем удобрения.<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">4</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">849</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Вт Сен 08, 2026 5:55 am<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=501004#501004"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="catLeft" colspan="2" height="28"><span class="cattitle"><a href="index.php?c=10" class="cattitle">Цифровые технологии</a></span></td>
+	<td class="rowpic" colspan="3" align="right">&nbsp;</td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=82" class="forumlink">Игры</a><br />
+	  </span> <span class="genmed"><br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">400</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">23218</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Пн Апр 13, 2026 6:44 pm<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=499775#499775"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=10" class="forumlink">Наука и технологии</a><br />
+	  </span> <span class="genmed">и немножко программирования<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">572</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">14797</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Вс Ноя 15, 2026 10:59 am<br /><a href="profile.php?mode=viewprofile&amp;u=13266">tania</a> <a href="viewtopic.php?p=501381#501381"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="catLeft" colspan="2" height="28"><span class="cattitle"><a href="index.php?c=13" class="cattitle">Служебный раздел</a></span></td>
+	<td class="rowpic" colspan="3" align="right">&nbsp;</td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=1" class="forumlink">Форум</a><br />
+	  </span> <span class="genmed">Форум :)<br />
+	  </span><span class="gensmall">Модератор <a href="profile.php?mode=viewprofile&amp;u=475">Slav</a></span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">3976</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">115808</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Сб Сен 26, 2026 5:32 pm<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=501157#501157"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" height="50"><img src="templates/subSilver/images/folder_big.gif" width="46" height="25" alt="Нет новых сообщений" title="Нет новых сообщений" /></td>
+	<td class="row1" width="100%" height="50"><span class="forumlink"> <a href="viewforum.php?f=84" class="forumlink">Database Maintenance</a><br />
+	  </span> <span class="genmed">Database Maintenance<br />
+	  </span><span class="gensmall">&nbsp; &nbsp;</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">7</span></td>
+	<td class="row2" align="center" valign="middle" height="50"><span class="gensmall">21</span></td>
+	<td class="row2" align="center" valign="middle" height="50" nowrap="nowrap"> <span class="gensmall">Чт Ноя 17, 2022 10:29 pm<br /><a href="profile.php?mode=viewprofile&amp;u=475">Slav</a> <a href="viewtopic.php?p=486666#486666"><img src="templates/subSilver/images/icon_latest_reply.gif" border="0" alt="Посмотреть последнее сообщение" title="Посмотреть последнее сообщение" /></a></span></td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="0" border="0" align="center" cellpadding="2">
+  <tr>
+ 	<td align="left">
+ 	</td>
+	<td align="right"><span class="gensmall">Часовой пояс: GMT</span></td>
+  </tr>
+</table>
+
+<!-- Start add - Fully integrated shoutbox MOD -->
+<table width="100%" cellspacing="0" border="0" align="center" cellpadding="2" class="forumline">
+      <tr>
+         <td align="center" nowrap="nowrap" class="catHead"><span class="cattitle"><a href="shoutbox_max.php">Shoutbox</a></span></td>
+      </tr>
+      <tr>
+         <td>
+          <iframe src="shoutbox.php" scrolling="NO" width="100%" height="180" frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true"></iframe>
+         </td>
+  </tr>
+</table>
+<br/>
+<!-- End add - Fully integrated shoutbox MOD -->
+
+<table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
+  <tr>
+	<td class="catHead" colspan="2" height="28"><span class="cattitle"><a href="viewonline.php" class="cattitle">Кто сейчас на форуме</a></span></td>
+  </tr>
+  <tr>
+	<td class="row1" align="center" valign="middle" rowspan="2"><img src="templates/subSilver/images/whosonline.gif" alt="Кто сейчас на форуме" /></td>
+	<td class="row1" align="left" width="100%"><span class="gensmall">Наши пользователи оставили сообщений: <b>484101</b><br />Всего зарегистрированных пользователей: <b>666</b><br />Последний зарегистрированный пользователь: <b><a href="profile.php?mode=viewprofile&amp;u=29048">Бэтмен</a></b><br />Наши самые уважаемые пользователи: <b><a href="profile.php?mode=viewprofile&amp;u=18836">brilliant green</a></b> (229), <b><a href="profile.php?mode=viewprofile&amp;u=487" style="color: #FFA34F">.</a></b> (217), <b><a href="profile.php?mode=viewprofile&amp;u=27651">Twilight Sparkle</a></b> (206), <b><a href="profile.php?mode=viewprofile&amp;u=6993">Ely</a></b> (197), <b><a href="profile.php?mode=viewprofile&amp;u=21520">Malen</a></b> (163)</span>
+	</td>
+  </tr>
+  <tr>
+	<td class="row1" align="left"><span class="gensmall">Сейчас посетителей на форуме: <b>98</b>, из них зарегистрированных: 0, скрытых: 0 и гостей: 98 &nbsp; [ <span style="color:#FFA34F">Администратор</span> ] &nbsp; [ <span style="color:#006600">Модератор</span> ]<br />Больше всего посетителей (<b>1023</b>) здесь было Сб Май 30, 2026 10:40 pm<br />Зарегистрированные пользователи: Нет</span></td>
+  </tr>
+</table>
+
+<table width="100%" cellpadding="1" cellspacing="1" border="0">
+<tr>
+	<td align="left" valign="top"><span class="gensmall">Эти данные основаны на активности пользователей за последние пять минут</span></td>
+</tr>
+</table>
+
+<form method="post" action="login.php">
+  <table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
+	<tr>
+	  <td class="catHead" height="28"><a name="login"></a><span class="cattitle">Вход</span></td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center" valign="middle" height="28"><span class="gensmall">Имя:
+		<input class="post" type="text" name="username" size="10" />
+		&nbsp;&nbsp;&nbsp;Пароль:
+		<input class="post" type="password" name="password" size="10" maxlength="32" />
+		&nbsp;&nbsp; &nbsp;&nbsp;Автоматически входить при каждом посещении
+		<input class="text" type="checkbox" name="autologin" />
+		&nbsp;&nbsp;&nbsp;
+		<input type="submit" class="mainoption" name="login" value="Вход" />
+		</span> </td>
+	</tr>
+  </table>
+</form>
+
+<br clear="all" />
+
+<table cellspacing="3" border="0" align="center" cellpadding="0">
+  <tr>
+	<td width="20" align="center"><img src="templates/subSilver/images/folder_new_big.gif" alt="Новые сообщения"/></td>
+	<td><span class="gensmall">Новые сообщения</span></td>
+	<td>&nbsp;&nbsp;</td>
+	<td width="20" align="center"><img src="templates/subSilver/images/folder_big.gif" alt="Нет новых сообщений" /></td>
+	<td><span class="gensmall">Нет новых сообщений</span></td>
+	<td>&nbsp;&nbsp;</td>
+	<td width="20" align="center"><img src="templates/subSilver/images/folder_locked_big.gif" alt="Форум закрыт" /></td>
+	<td><span class="gensmall">Форум закрыт</span></td>
+  </tr>
+</table>
+
+<div align="center"><span class="copyright"><br /><br />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB 2.0. If you cannot (for good
+	reason) retain the full copyright we request you at least leave in place the
+	Powered by phpBB line, with phpBB linked to www.phpbb.com. If you refuse
+	to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2002
+// -->
+Powered by phpBB &copy; 2001, 2005 phpBB Group<br />Русская поддержка phpBB</span></div>
+		</td>
+	</tr>
+</table>
+
+
+<img style="position: absolute; right: 20px; top: 10px;" src="http://rasty.kiev.ua/templates/snowman.png">
+</body>
+</html>
+
